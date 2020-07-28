@@ -18,9 +18,7 @@ while(1):
 	elif entekhabesystem == 2 : entekhabesystemstring = "kaghaz"
 	elif entekhabesystem == 3 : entekhabesystemstring = "gheychi"
 	print("entekhabe system : "+entekhabesystemstring)
-	if(entekhabesystem == 1 and entekhab == 2) or
-	(entekhabesystem == 2 and entekhab == 3) or
-	(entekhabesystem == 3 and entekhab == 1):
+	if(entekhabesystem == 1 and entekhab == 2) or (entekhabesystem == 2 and entekhab == 3) or (entekhabesystem == 3 and entekhab == 1):
 		print("shoma barande shodid !!!")
 		emtiyaz+=1
 	elif entekhabesystem == entekhab :
