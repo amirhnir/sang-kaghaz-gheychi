@@ -1,29 +1,36 @@
-# programmer : AmirHossein Naei
-# website : amirhn.ir
-
 import random
-emtiyaz = 0
-while(1):
-	print("emtiyaz : " +str(emtiyaz))
-	entekhab = input("1- sang \n2- kaghaz \n3- gheychi \n")
-	entekhab = int(entekhab)
-	if entekhab == 0 : 
-		break
-	if (entekhab != 1) and (entekhab != 2) and (entekhab != 3):
-		print("voroodi na motabar ast")
-		break
-	entekhabesystem = random.randint(1,3)
-	entekhabesystemstring = ""
-	if entekhabesystem == 1 : entekhabesystemstring = "sang"
-	elif entekhabesystem == 2 : entekhabesystemstring = "kaghaz"
-	elif entekhabesystem == 3 : entekhabesystemstring = "gheychi"
-	print("entekhabe system : "+entekhabesystemstring)
-	if(entekhabesystem == 1 and entekhab == 2) or (entekhabesystem == 2 and entekhab == 3) or (entekhabesystem == 3 and entekhab == 1):
-		print("shoma barande shodid !!!")
-		emtiyaz+=1
-	elif entekhabesystem == entekhab :
-		print("mosavi shodid !!")
-	else :
-		print("shoma bakhtid !!!")
-		emtiyaz-=1
-	print("\n\n")
+mark = 0
+
+while (True):
+
+    print ("mark : " +str (mark))
+
+    choice = input ("1. stone \n2. paper \n3. Scissors \nChoose your option : ")
+    choice = int (choice)
+
+    if (choice == 0) :
+        break
+    
+    if (choice != 1) and (choice != 2) and (choice != 3):
+        print ("Your input is invalid")
+
+    choicesystem = random.randint(1,3)
+    x = ""
+
+    if choicesystem == 1 : x = "stone"
+    elif choicesystem == 2 : x = "paper"
+    elif choicesystem == 3 : x = "Scissors"
+    print ("System selection : "+x)
+
+    if (choicesystem == 1 and choice == 2) or (choicesystem == 2 and choice == 3) or (choicesystem == 3 and choice == 1):
+        print ("You got a positive score")
+        mark += 1
+
+    elif (choicesystem == choice):
+        print ("Your choice is equal to the choice of system")
+
+    else :
+        print ("game over")
+        mark -= 1
+
+    print ("\n") 
